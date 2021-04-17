@@ -2,8 +2,17 @@
 //      INDEX FOR COMPONENTS
 //==============================================
 
-import ProductCard from "./Product Cards/ProductsCard";
-import Filters from "./Filters/Filters";
+import Products from "./Products/Products";
+import ProductCard from "./Products/ProductCards";
+import FilterBtns from "./Filters/Filter-Input-btns";
+import {
+  filterProducts,
+  sortByPrices,
+  sortByRatings,
+  sortByRelevances,
+} from "./Filters/Filter";
 
+export { Products };
 export { ProductCard };
-export { Filters };
+export { FilterBtns };
+export { filterProducts, sortByPrices, sortByRatings, sortByRelevances };

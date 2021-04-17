@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Filter.css";
 
-const Filters = ({ dispatch }) => {
+const FilterBtns = ({ dispatch }) => {
   const [isChecked, setIsChecked] = useState({
     sortByPrice: null,
     sortByRatings: null,
@@ -53,8 +53,10 @@ const Filters = ({ dispatch }) => {
     <>
       <div className="filter-container">
         <h1>Hello I am filter</h1>
+
         <fieldset>
           <legend>Sort By</legend>
+
           <label>
             <input
               type="radio"
@@ -67,7 +69,9 @@ const Filters = ({ dispatch }) => {
             />
             <span className="sortName">Price : </span> Low to High
           </label>
+
           <br />
+
           <label>
             <input
               type="radio"
@@ -80,7 +84,9 @@ const Filters = ({ dispatch }) => {
             />
             <span className="sortName">Price : </span> High to Low
           </label>
+
           <br />
+
           <label>
             <input
               type="radio"
@@ -93,7 +99,9 @@ const Filters = ({ dispatch }) => {
             />
             <span className="sortName">Ratings : </span> High to Low
           </label>
+
           <br />
+
           <label>
             <input
               type="radio"
@@ -106,7 +114,9 @@ const Filters = ({ dispatch }) => {
             />
             <span className="sortName">Ratings : </span> Low To High
           </label>
+
           <br />
+
           <label>
             <input
               type="radio"
@@ -124,4 +134,4 @@ const Filters = ({ dispatch }) => {
     </>
   );
 };
-export default Filters;
+export default FilterBtns;

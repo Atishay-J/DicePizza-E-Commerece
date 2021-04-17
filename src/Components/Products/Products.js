@@ -5,7 +5,7 @@ export default function Products({ products }) {
   return (
     <>
       {products.map((items) => (
-        <li key={items.id}>
+        <li className="removeListStyle" key={items.id}>
           <ProductCard
             image={items.pizzaImages}
             title={`

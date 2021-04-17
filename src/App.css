@@ -3,15 +3,32 @@
   padding: 0;
   box-sizing: border-box;
 }
-.mainContent-container {
+.mainContentContainer {
   display: flex;
   flex-basis: 0;
   justify-content: space-between;
 }
-.products-container {
+.productsContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   border: 1px solid rgb(160, 201, 47);
   width: 85%;
+}
+
+.mainFilterContainer {
+  background: rgb(15, 62, 163);
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+}
+.mainToggleContainer {
+  /* position: absolute; */
+  background: #000;
+  border: 2px solid rgb(52, 194, 24);
+  width: 200px;
+  /* top: 200px; */
+}
+.removeListStyle {
+  list-style: none;
 }

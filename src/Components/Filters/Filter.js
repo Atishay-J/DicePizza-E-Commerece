@@ -1,4 +1,4 @@
-// import { data } from "../../Data";
+import "./Filter.css";
 
 const filterProducts = (state, action) => {
   switch (action.type) {
@@ -16,6 +16,13 @@ const filterProducts = (state, action) => {
     default:
       return state;
   }
+};
+
+const toggleVeg = (productsData, isVeg) => {
+  if (isVeg) {
+    return [...productsData].filter((product) => product.isVeg === true);
+  }
+  return productsData;
 };
 
 const sortByPrices = (products, sortBy) => {
@@ -51,4 +58,10 @@ const sortByRelevances = (sortedData, sortBy, originalData) => {
   return sortedData;
 };
 
-export { filterProducts, sortByPrices, sortByRatings, sortByRelevances };
+export {
+  filterProducts,
+  toggleVeg,
+  sortByPrices,
+  sortByRatings,
+  sortByRelevances,
+};

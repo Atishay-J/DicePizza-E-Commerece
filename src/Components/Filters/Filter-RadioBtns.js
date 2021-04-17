@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./Filter.css";
 
 const FilterBtns = ({ dispatch }) => {
   const [isChecked, setIsChecked] = useState({

@@ -17,6 +17,8 @@ import ProductPage from "./Products/ProductsPage";
 import Cart from "./Cart/Cart";
 import Favourites from "./Favourites/Favourites";
 
+import { CartContext, CartProvider, useCart } from "./Context/Cart-context";
+
 export { Products, ProductCard };
 export {
   FilterBtns,
@@ -28,3 +30,5 @@ export {
   sortByRelevances,
 };
 export { Cart, Favourites, ProductPage };
+
+export { CartContext, CartProvider, useCart };

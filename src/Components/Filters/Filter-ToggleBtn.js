@@ -1,15 +1,15 @@
 export default function FilterToggleBtn({ handleToggle }) {
   return (
     <>
-      <div class="toggleBtnContainer">
-        <label class="toggleSwitch">
+      <div className="toggleBtnContainer">
+        <label className="toggleSwitch">
           <input
-            class="toggleBtnInput"
+            className="toggleBtnInput"
             type="checkbox"
             name="toggleVeg"
             onChange={(event) => handleToggle(event)}
           />{" "}
-          <div class="thumbBtn"></div>
+          <div className="thumbBtn"></div>
         </label>
       </div>
     </>

@@ -1,6 +1,18 @@
 import "./ProductCard.css";
 
-const ProductCard = ({ image, title, description, price, type, ratings }) => {
+import { useCart } from "../index";
+
+const ProductCard = ({
+  id,
+  image,
+  title,
+  description,
+  price,
+  type,
+  ratings,
+}) => {
+  const { dispatch } = useCart();
+
   return (
     <>
       <div className="productCard-container">
@@ -14,7 +26,28 @@ const ProductCard = ({ image, title, description, price, type, ratings }) => {
               <h4 className="productPrice">₹{price}</h4>
               <p className="prductRatings">{ratings}</p>
             </div>
-            <button className="addToCart">Add</button>
+            <button
+              className="addToCart"
+              onClick={() =>
+                dispatch({
+                  type: "ADD_TO_CART",
+                  payload: { id, image, title, price, type },
+                })
+              }
+            >
+              Add
+            </button>
+            <button
+              className="addToFavourites"
+              onClick={() =>
+                dispatch({
+                  type: "ADD_TO_FAVOURITES",
+                  payload: { id, image, title, price, type },
+                })
+              }
+            >
+              Add to Favourites
+            </button>
           </div>
         </div>
       </div>

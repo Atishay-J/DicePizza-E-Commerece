@@ -7,6 +7,7 @@ export default function Products({ products }) {
       {products.map((items) => (
         <li className="removeListStyle" key={items.id}>
           <ProductCard
+            id={items.id}
             image={items.pizzaImages}
             title={`
              ${items.name}

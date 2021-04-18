@@ -1,5 +1,5 @@
 import React from "react";
-import { useCart } from "../index";
+import { CartCard, useCart } from "../index";
 
 export default function Cart() {
   const { state } = useCart();
@@ -8,7 +8,16 @@ export default function Cart() {
     <>
       <h1>I am cart</h1>
       {state.cart.map((item) => (
-        <li key={item.id}>{item.title}</li>
+        <li className="removeListStyle" key={item.id}>
+          <CartCard
+            title={item.title}
+            price={item.price}
+            image={item.image}
+            id={item.id}
+            isVeg={item.type}
+            dispatchType="REMOVE_FROM_CART"
+          />
+        </li>
       ))}
     </>
   );

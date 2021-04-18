@@ -3,15 +3,20 @@ import React, { createContext, useContext, useReducer } from "react";
 export const CartContext = createContext();
 
 const cartReducer = (state, action) => {
-  console.log("Cart Reducer Called");
+  console.log("Cart Reducer Called", state);
   switch (action.type) {
     case "ADD_TO_CART":
-      console.log("Item Added To Cart, From Context");
       return { ...state, cart: [action.payload, ...state.cart] };
 
     case "ADD_TO_FAVOURITES":
-      console.log("Item Added To FAvorites, From Context");
       return { ...state, favourites: [action.payload, ...state.favourites] };
+
+    case "REMOVE_FROM_CART":
+      console.log("ITEM REMOVED FROM CART");
+      return {
+        ...state,
+        cart: state.cart.filter((prev) => prev.id !== action.payload.id),
+      };
 
     default:
       return state;
@@ -24,7 +29,6 @@ export const CartProvider = ({ children }) => {
     cart: [],
     favourites: [],
   });
-  console.log("Value From Cart-Context", state);
 
   return (
     <CartContext.Provider value={{ state, dispatch }}>

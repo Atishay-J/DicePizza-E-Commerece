@@ -52,7 +52,6 @@ const sortByRatings = (sortedByPrice, sortBy) => {
 };
 
 const sortByRelevances = (sortedData, sortBy) => {
-  console.log("DATA GOT FROM ISVEG", sortedData);
   if (sortBy === "relevance") {
     return [...sortedData];
   }

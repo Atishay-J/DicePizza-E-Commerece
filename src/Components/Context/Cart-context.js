@@ -18,6 +18,14 @@ const cartReducer = (state, action) => {
         cart: state.cart.filter((prev) => prev.id !== action.payload.id),
       };
 
+    case "REMOVE_FROM_FAVOURITES":
+      console.log("ITEM REMOVED FROM FAVOURITES");
+      return {
+        ...state,
+        favourites: state.favourites.filter(
+          (prev) => prev.id !== action.payload.id
+        ),
+      };
     default:
       return state;
   }

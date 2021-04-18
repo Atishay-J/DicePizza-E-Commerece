@@ -1,6 +1,14 @@
 import { useCart } from "../index";
 
-const CartCard = ({ id, title, price, image, isVeg, dispatchType }) => {
+const CartCard = ({
+  id,
+  title,
+  price,
+  image,
+  isVeg,
+  dispatchType,
+  btnName,
+}) => {
   const { dispatch } = useCart();
 
   return (
@@ -17,7 +25,7 @@ const CartCard = ({ id, title, price, image, isVeg, dispatchType }) => {
             className="cartCardBtn"
             onClick={() => dispatch({ type: dispatchType, payload: { id } })}
           >
-            Remove From Cart
+            {btnName}
           </button>
         </div>
       </div>

@@ -13,15 +13,18 @@ import {
   sortByRelevances,
 } from "./Filters/Filter";
 import FilterToggleBtn from "./Filters/Filter-ToggleBtn";
+import ProductPage from "./Products/ProductsPage";
+import Cart from "./Cart/Cart";
+import Favourites from "./Favourites/Favourites";
 
-export { Products };
-export { ProductCard };
-export { FilterBtns };
+export { Products, ProductCard };
 export {
+  FilterBtns,
+  FilterToggleBtn,
   filterProducts,
   toggleVeg,
   sortByPrices,
   sortByRatings,
   sortByRelevances,
 };
-export { FilterToggleBtn };
+export { Cart, Favourites, ProductPage };

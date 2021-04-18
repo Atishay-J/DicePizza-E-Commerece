@@ -3,7 +3,7 @@
 //==============================================
 
 import Products from "./Products/Products";
-import ProductCard from "./Products/ProductCards";
+import ProductCard from "./Cards/ProductCards";
 import FilterBtns from "./Filters/Filter-RadioBtns";
 import {
   filterProducts,

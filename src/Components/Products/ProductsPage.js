@@ -30,11 +30,7 @@ function ProductPage() {
   let sortedByIsVeg = toggleVeg(data, isVeg);
   let sortedByPrice = sortByPrices(sortedByIsVeg, sortByPrice);
   let sortedByRatings = sortByRatings(sortedByPrice, sortByRating);
-  let sortedByRelevance = sortByRelevances(
-    sortedByRatings,
-    sortByRelevance,
-    data
-  );
+  let sortedByRelevance = sortByRelevances(sortedByRatings, sortByRelevance);
 
   return (
     <div className="mainContentContainer">

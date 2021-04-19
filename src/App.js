@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-
+      {console.log("fROM APPPPPPPPPPP")}
       <Routes>
         <Route exact path="/" element={<ProductPage />} />
         <Route exact path="cart" element={<Cart />} />

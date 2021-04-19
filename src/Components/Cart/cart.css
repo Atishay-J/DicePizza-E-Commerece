@@ -1,0 +1,12 @@
+/* .mainCartContainer {
+} */
+.cartWrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+.cartContainer {
+  border: 1px solid green;
+}
+.cartCheckoutContainer {
+  border: 1px solid purple;
+}

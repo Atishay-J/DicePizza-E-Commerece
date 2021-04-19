@@ -4,12 +4,19 @@ export const CartContext = createContext();
 
 const cartReducer = (state, action) => {
   console.log("Cart Reducer Called", state);
+  console.log("ACTION JACKSON", action);
   switch (action.type) {
     case "ADD_TO_CART":
       return { ...state, cart: [action.payload, ...state.cart] };
 
     case "ADD_TO_FAVOURITES":
       return { ...state, favourites: [action.payload, ...state.favourites] };
+
+    case "CHANGE_CART_ITEM_QTY":
+      return {
+        ...state,
+        cart: { qty: action.payload.qty },
+      };
 
     case "REMOVE_FROM_CART":
       console.log("ITEM REMOVED FROM CART");

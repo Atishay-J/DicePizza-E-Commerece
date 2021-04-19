@@ -13,6 +13,7 @@ import {
 import Products from "./Products/Products";
 import ProductCard from "./Cards/ProductCards";
 import CartCard from "./Cards/CartCard";
+import CartTotal from "./Cart/CartTotal";
 import FilterBtns from "./Filters/Filter-RadioBtns";
 import FilterToggleBtn from "./Filters/Filter-ToggleBtn";
 import ProductPage from "./Products/ProductsPage";
@@ -30,6 +31,6 @@ export {
   sortByRatings,
   sortByRelevances,
 };
-export { Cart, Favourites, ProductPage };
+export { Cart, Favourites, ProductPage, CartTotal };
 
 export { CartContext, CartProvider, useCart };
